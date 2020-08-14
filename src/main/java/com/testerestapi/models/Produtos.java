@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.sun.istack.NotNull;
+
 @Entity
 @Table(name="produtos")
 
@@ -21,13 +23,23 @@ public class Produtos implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	
+	//https://docs.oracle.com/javaee/7/api/javax/validation/constraints/package-summary.html?fbclid=IwAR3c4AadGL8y5IJ_8VDljHw5BG8Yj6qBYN1hOfFR7BHa4vw6lRy2CXrszPU
+	
+	
 	private long   id_produto; 
+    @NotNull
     private String chave_usuario; 
-	private String descricao;           
+    @NotNull
+    private String descricao;           
+    @NotNull
     private String estoque_atual;           
+    @NotNull
     private String vendedor;           
+    @NotNull
     private String preco_principal;               
+    @NotNull
     private String preco_compra;              
+    @NotNull
     private String id_tabela_precos;
     
     
