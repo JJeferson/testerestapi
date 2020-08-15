@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.sun.istack.NotNull;
+
 @Entity
 @Table(name="usuarios")
 public class Usuarios implements Serializable {
@@ -18,18 +20,30 @@ public class Usuarios implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	
 	private long   id_usuario;
+	@NotNull
     private String tipo_usuario; 
+	@NotNull
     private String chave_usuario; 
-	private String nome;           
-    private String email;           
-    private String senha;           
-    private String RG;               
-    private String CPF;              
-    private String endereco;        
-    private String estado;            
-    private String pais;            
-    private String cep;             
-    private String fone;    
+	@NotNull
+	private String nome;
+	@NotNull 
+	private String email;
+	@NotNull
+	private String senha;           
+	@NotNull
+	private String RG;               
+	@NotNull
+	private String CPF;              
+	@NotNull
+	private String endereco;        
+	@NotNull
+	private String estado;            
+	@NotNull
+	private String pais;            
+	@NotNull
+	private String cep;             
+	@NotNull
+	private String fone;    
     
     
     public long getId_usuario() {

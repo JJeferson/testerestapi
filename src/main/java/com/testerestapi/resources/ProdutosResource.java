@@ -81,6 +81,7 @@ public class ProdutosResource {
 	
 	@PostMapping("/produtos")
 	public Produtos Produtos(@RequestBody Produtos produtos){
+		
 		return produtosRepository.save(produtos);
 		
 		/*
