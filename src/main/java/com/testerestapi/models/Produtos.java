@@ -56,9 +56,12 @@ public class Produtos implements Serializable{
 		this.chave_usuario = chave_usuario;
 	}
 	public String getDescricao() {
-		return descricao;
+		//descricao = descricao+  " GET  rolando aqui";
+	    return descricao;
 	}
 	public void setDescricao(String descricao) {
+		//Para implementar calculos ou validações antes da gravação
+		//descricao = descricao+ "Set rolanco aqui";
 		this.descricao = descricao;
 	}
 	public String getEstoque_atual() {

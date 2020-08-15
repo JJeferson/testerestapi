@@ -26,6 +26,7 @@ public class Usuarios implements Serializable {
     private String chave_usuario; 
 	@NotNull
 	private String nome;
+
 	@NotNull 
 	private String email;
 	@NotNull
