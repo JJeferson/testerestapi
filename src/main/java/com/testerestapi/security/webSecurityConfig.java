@@ -9,16 +9,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
 public class webSecurityConfig extends WebSecurityConfigurerAdapter  {
 
-
-//	@Autowired
-//	private ImplementsUserDetailsService userDetailsService;
+ 
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
@@ -41,8 +39,9 @@ public class webSecurityConfig extends WebSecurityConfigurerAdapter  {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth.inMemoryAuthentication()
-		.withUser("teste").password("123").roles("ADMIN");
-		//.passwordEncoder(new BCryptPasswordEncoder());
+		.passwordEncoder(new BCryptPasswordEncoder())
+		.withUser("teste").password("teste").roles("ADMIN");
+		 
 	}
 
 	@Override
